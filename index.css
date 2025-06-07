@@ -2339,18 +2339,45 @@ font-size: 0.8rem;
     }
 }
 
+/* Custom Merch Section Mobile Fixes */
 @media (max-width: 480px) {
+    .custom-merch-section {
+        overflow: visible; /* Allow content to overflow */
+        height: auto; /* Let height adjust to content */
+    }
+
     .custom-merch-grid {
-        grid-template-columns: 1fr;
+        overflow: visible; /* Allow content to overflow */
+        height: auto; /* Let height adjust to content */
+        padding: 0 15px;
     }
-    
-    .custom-merch-dots {
-        margin-top: 15px;
+
+    .custom-merch-slider {
+        overflow: visible; /* Allow content to overflow */
+        height: auto; /* Let height adjust to content */
+        touch-action: pan-x pan-y; /* Enable both horizontal and vertical touch scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
-    
-    .custom-merch-dot {
-        width: 10px;
-        height: 10px;
+
+    .custom-merch-card {
+        position: relative; /* Change from absolute to relative */
+        opacity: 1; /* Make all cards visible */
+        height: auto; /* Let height adjust to content */
+        min-height: auto; /* Remove fixed min-height */
+        margin-bottom: 20px; /* Add space between cards */
+    }
+
+    .custom-merch-card.active {
+        position: relative;
+    }
+
+    .custom-merch-image {
+        height: 250px; /* Fixed height for images */
+    }
+
+    .custom-merch-info {
+        padding: 15px 0;
+        height: auto; /* Let height adjust to content */
     }
 }
 
